@@ -1,0 +1,15 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { company } from "~/data/company";
+---
+
+<BaseLayout title={`Thanks — ${company.name}`}>
+  <section class="mx-auto max-w-2xl px-4 py-24 text-center">
+    <h1 class="text-4xl font-extrabold text-ink">Thanks — we got it.</h1>
+    <p class="mt-4 text-lg text-slate-600">
+      A team member from {company.name} will follow up within one business day.
+      Need us sooner? Call <a href={company.phoneHref} class="font-semibold text-brand">{company.phone}</a>.
+    </p>
+    <a href="/" class="btn-secondary mt-10">Back to home</a>
+  </section>
+</BaseLayout>
