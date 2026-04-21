@@ -1,0 +1,22 @@
+---
+import { company } from "~/data/company";
+import SocialLinks from "./SocialLinks.astro";
+---
+
+<header class="border-b border-slate-200 bg-white">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/favicon.svg" alt="" class="h-9 w-9" />
+      <div class="leading-tight">
+        <div class="text-lg font-bold text-ink">{company.name}</div>
+        <div class="text-xs text-slate-500">{company.tagline}</div>
+      </div>
+    </a>
+    <div class="flex items-center gap-4">
+      <SocialLinks class="hidden sm:flex text-slate-500" />
+      <a href={company.phoneHref} class="btn-primary text-sm sm:text-base">
+        Call {company.phone}
+      </a>
+    </div>
+  </div>
+</header>
